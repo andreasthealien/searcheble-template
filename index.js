@@ -74,7 +74,7 @@ function search(searchWord) {
     const subSearchList = [];
 
     words.forEach((word, index, array) => {
-        if (word.word.includes(searchWord)) {
+        if (word.word.toLowerCase().includes(searchWord.toLowerCase())) {
             subSearchList.push(array[index])
         };
     });
