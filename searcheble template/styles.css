@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+#search-div {
+    margin-left: auto;
+    display: flex;
+    width: min-content;
+}
+
+#search-title {
+    font-size: 1.05rem;
+    margin: auto 0px;
+}
+
+#search-div input {
+    font-size: 0.95rem;
+    width: 125px;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+#søk-button {
+    margin-right: 10px;
+    background-color: gainsboro;
+}
+
+#søk-button:hover {
+    cursor: pointer;
+    background-color: rgb(136, 136, 136);
+}
+
+#søk-button:active {
+    background-color: gray;
+}
+
+#search-div input, #søk-button {
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+#table-holder {
+    border-radius: 10px;
+    padding: 10px 0px;
+    background-color: lightgray;
+    width: 80%;
+    margin: 0px auto;
+}
+
+#word-table, #word-table th, #word-table, td {
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+
+#word-table {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.table-collon {
+    padding: 4px;
+}
+
+.word-table-part {
+    width: 25%;
+}
+
+.explanation-table-part {
+    width: 75%;
+}
+
+.ikke-funnet {
+    margin: 55px 0px 100px;
+    color: rgb(218, 0, 0);
+    text-align: center;
+}
+
+footer {
+    padding: 25px;
+    background-color: rgb(47, 47, 47);
+}
+
+footer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer * {
+    color: white;
+}
+
+
+.hidden {
+    display: none;
+}

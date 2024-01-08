@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.png">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Begrep search</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Naturfag begreper
+        </h1>
+    </header>
+    <main>
+        <div id="table-holder">
+            <div id="search-div">
+                <p id="search-title">Search:</p>
+                <input type="text" placeholder="ord" id="search-input">
+                <button id="søk-button">søk</button>
+            </div>
+
+            <table id="word-table">
+                <tr>
+                    <th class="word-table-part table-collon">
+                        Ord
+                    </th>
+                    <th class="explanation-table-part table-collon">
+                        Forklaring
+                    </th>
+                </tr>
+            </table>
+            <h2 class="ikke-funnet hidden">Vi har ikke informasjon om: "Non-valid".</h2>
+        </div>
+    </main>
+    <footer>
+        <h2>Sources</h2>
+        <div>
+            <a href="https://www.gyldendal.no/grs/element/9/element-9-grunnbok/p-10025919-no/" target="_blank">Element - ordenes forklaring er hentet fra element.</a>
+            <a href="https://drawinghowtos.com/wp-content/uploads/2021/09/book-colored.jpg" target="_blank">Favicon/icon bildet</a>
+        </div>
+        <script src="./index.js"></script>
+    </footer>
+</body>
+</html>
