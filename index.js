@@ -19,6 +19,7 @@ const words = [
 
 
 const normallyPlaced = document.getElementById("word-table");
+const noMatchWord = document.querySelector("#noMatch")
 
 function showNoResultMessage(trueOrFalse) {
     if (trueOrFalse === true) {
@@ -26,6 +27,10 @@ function showNoResultMessage(trueOrFalse) {
     } else {
         document.querySelector(".ikke-funnet").classList.add("hidden");
     }
+}
+
+function changeNoResultWord(wordToReplace) {
+    noMatchWord.innerText = wordToReplace;
 }
 
 function MakeBlock(theWord, theExplanation, placement) {
@@ -76,9 +81,11 @@ function search(searchWord) {
 
     if (subSearchList.length === 0) {
         DeleteAllBlocks();
+        changeNoResultWord(searchWord);
         showNoResultMessage(true);
     } else {
         DeleteAllBlocks();
+        changeNoResultWord("");
         showNoResultMessage(false);
         PlaceBlocksList(subSearchList);
     };
@@ -87,6 +94,7 @@ function search(searchWord) {
 
 const searchInputElement = document.querySelector("#search-input");
 const searchButtonElement = document.querySelector("#søk-button");
+const resetButton = document.querySelector("#reset-button");
 
 searchInputElement.addEventListener("keydown", (e) => {
     const value = searchInputElement.value;
@@ -97,10 +105,18 @@ searchInputElement.addEventListener("keydown", (e) => {
     };
 });
 
-searchButtonElement.addEventListener("key", () => {
+searchButtonElement.addEventListener("click", () => {
     const value = searchInputElement.value;
-    
-    if (keyHit === "Enter") {
-        search(value);
-    };
+    search(value);
 });
+
+resetButton.addEventListener("click", () => {
+    changeNoResultWord("");
+    showNoResultMessage(false);
+    DeleteAllBlocks();
+    searchInputElement.value = "";
+    PlaceBlocksList(words);
+});
+
+
+PlaceBlocksList(words);

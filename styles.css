@@ -15,8 +15,35 @@ header h1 {
     margin: 20px 0px;
 }
 
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#reset-div {
+    white-space: nowrap;
+    margin-left: 10px;
+    font-size: 0.95rem;
+}
+
+#reset-button {
+    font-size: 0.95rem;
+    padding: 2px 5px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+#reset-button:hover {
+    cursor: pointer;
+    background-color: rgb(136, 136, 136);
+}
+
+#reset-button:active {
+    background-color: gray;
+}
+
 #search-div {
-    margin-left: auto;
     display: flex;
     width: min-content;
 }
@@ -26,7 +53,7 @@ header h1 {
     margin: auto 0px;
 }
 
-#search-div input {
+#search-div input{
     font-size: 0.95rem;
     width: 125px;
     margin-left: 10px;

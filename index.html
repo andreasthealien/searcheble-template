@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.png">
     <link rel="stylesheet" href="./styles.css">
-    <title>Begrep search</title>
+    <title>Naturfag begreper</title>
 </head>
 <body>
     <header>
@@ -15,10 +15,15 @@
     </header>
     <main>
         <div id="table-holder">
-            <div id="search-div">
-                <p id="search-title">Search:</p>
-                <input type="text" placeholder="ord" id="search-input">
-                <button id="søk-button">søk</button>
+            <div id="menu">
+                <div id="reset-div">
+                    <button id="reset-button">Reset list</button>
+                </div>
+                <div id="search-div">
+                    <p id="search-title">Search:</p>
+                    <input type="text" placeholder="ord" id="search-input">
+                    <button id="søk-button">søk</button>
+                </div>
             </div>
 
             <table id="word-table">
@@ -31,7 +36,7 @@
                     </th>
                 </tr>
             </table>
-            <h2 class="ikke-funnet hidden">Vi har ikke informasjon om: "Non-valid".</h2>
+            <h2 class="ikke-funnet hidden">Vi har ikke informasjon om: "<span id="noMatch"></span>".</h2>
         </div>
     </main>
     <footer>
